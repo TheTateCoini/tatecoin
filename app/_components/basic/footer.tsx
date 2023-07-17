@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#0e0e0e] text-white rounded-t-[60px] lg:px-16 px-8 lg:py-12 py-6 mt-28">
       <div className="w-full">
-        <div className="w-full lg:flex flex-col items-start lg:py-16 py-8 border-b border-b-[#5b5b5b]">
+        <div className="w-full lg:flex-row flex flex-col items-start lg:py-16 py-8 border-b border-b-[#5b5b5b]">
           <div className="lg:w-[30%] lg:mr-16">
             <div className="lg:w-10/12">
               <h1 className="text-3xl mb-4">Tatecoin</h1>
@@ -36,7 +36,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="lg:w-[36%] flex items-start justify-between lg:mr-10 lg:my-0 my-8 text-lg">
+          <div className="lg:w-[36%] flex items-start justify-between lg:mr-10 lg:mt-0 mt-8 text-lg">
             <div className="lg:w-1/2">
               {menu.map((m) => (
                 <Link key={m} href={`/${m}`}>
