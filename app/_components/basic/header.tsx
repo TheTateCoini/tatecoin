@@ -27,6 +27,7 @@ export default function Header() {
           <img
             src="/images/tate.png"
             className="lg:w-11 lg:h-11 w-11 h-11 group-hover:scale-125 transition-transform duration-500 ease-in-out"
+            alt="tatelogo"
           />
           <p className="font-medium tracking-wider text-lg lg:text-2xl mt-1">
             Tate Coin.

@@ -85,7 +85,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex-col flex lg:flex w-full items-center justify-center lg:space-y-0 space-y-8 lg:space-x-16 mt-36">
+      <div className="flex-col flex lg:flex-row w-full items-center justify-center lg:space-y-0 space-y-8 lg:space-x-16 mt-36">
         {spts.map((sp, i) => (
           <BasicCard icon={sp.icon} label={sp.label} key={sp.label + i} />
         ))}
