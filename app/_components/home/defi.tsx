@@ -1,10 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Defi() {
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="lg:my-40 my-20 text-center flex flex-col items-center w-full">
+      <motion.div
+        initial={{ y: 150, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="lg:my-40 my-20 text-center flex flex-col items-center w-full"
+      >
         <p className="lg:text-5xl text-3xl font-bold racking-wider uppercase leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-[#f5f5f5]">
           Borderless & Decentralized
         </p>
@@ -16,8 +24,13 @@ export default function Defi() {
           Tatecoin as a store of value, explore peer-to-peer lending, and
           support decentralized applications (dApps) on blockchain platforms.
         </p>
-      </div>
-      <div className="w-full flex flex-col items-center text-center lg:mt-4 mb-12">
+      </motion.div>
+      <motion.div
+        initial={{ y: 150, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="w-full flex flex-col items-center text-center lg:mt-4 mb-12"
+      >
         <div className="lg:w-2/3">
           <p className="uppercase lg:text-5xl text-3xl mb-8 font-semibold leading-snug tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#efb909] via-[#fad353] to-[#f5f5f5]">
             Built on BNB SmartChain (BSC)
@@ -31,16 +44,21 @@ export default function Defi() {
           </p>
         </div>
         <div className="flex items-center justify-center mt-16">
-          <div className="relative overflow-hidden lg:h-[300px] h-52 w-52 lg:w-[300px]">
+          <motion.div
+            initial={{ y: 150, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="relative overflow-hidden lg:h-[300px] h-52 w-52 lg:w-[300px]"
+          >
             <Image
               src="/images/bsc.png"
               fill
               className="w-full h-full object-cover"
               alt="bsc"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

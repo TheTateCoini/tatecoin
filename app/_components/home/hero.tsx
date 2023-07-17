@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import BasicCard from "../basic/basic-card";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const spts = [
@@ -65,7 +68,12 @@ export default function Hero() {
   return (
     <div className="w-full lg:h-[80vh]">
       <div className="flex lg:flex-row flex-col items-center lg:items-start lg:justify-between lg:text-left text-center">
-        <div className="lg:w-1/2">
+        <motion.div
+          className="lg:w-1/2"
+          initial={{ y: 300, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <p className="tracking-wide leading-snug mb-6 text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-[#f5f5f5]">
             Financial Inclusivity To The Unbanked Population
           </p>
@@ -73,8 +81,13 @@ export default function Hero() {
             Tatecoin is enabling fast, secure and low-cost transactions
             boundaries for cross-border payments and remittances.
           </p>
-        </div>
-        <div className="lg:w-1/2 flex items-center justify-center lg:mt-0 mt-28">
+        </motion.div>
+        <motion.div
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="lg:w-1/2 flex items-center justify-center lg:mt-0 mt-28"
+        >
           <div className="lg:w-[450px] lg:h-[375px] w-56 h-48 relative">
             <Image
               src="/images/blocks.png"
@@ -83,7 +96,7 @@ export default function Hero() {
               alt="blocks"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex-col flex lg:flex-row w-full items-center justify-center lg:space-y-0 space-y-8 lg:space-x-16 mt-36">
         {spts.map((sp, i) => (

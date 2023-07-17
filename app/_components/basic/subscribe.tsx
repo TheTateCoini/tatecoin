@@ -2,11 +2,17 @@
 
 import React, { useState } from "react";
 import Button from "./button";
+import { motion } from "framer-motion";
 
 export default function Subscribe() {
   const [email, setemail] = useState("");
   return (
-    <div className="w-full rounded-[30px] lg:rounded-[40px] bg-lightgrey p-8 text-center lg:p-20 mt-32 flex flex-col items-center justify-between bg-gradient-to-r from-purple-600 via-purple-400 to-purple-300">
+    <motion.div
+      initial={{ y: 200, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="w-full rounded-[30px] lg:rounded-[40px] bg-lightgrey p-8 text-center lg:p-20 mt-32 flex flex-col items-center justify-between bg-gradient-to-r from-purple-600 via-purple-400 to-purple-300"
+    >
       <p className="lg:text-4xl text-2xl lg:w-[55%] text-center lg:leading-[45px] tracking-wide">
         Subscribe to our email newsletter for exciting updates
       </p>
@@ -24,6 +30,6 @@ export default function Subscribe() {
         />
         <Button bg="black" labelColor="white" label="Subscribe" />
       </div>
-    </div>
+    </motion.div>
   );
 }

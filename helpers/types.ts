@@ -20,4 +20,5 @@ export interface UsecaseProps {
   description: string;
   bgColor: string;
   textColor: string;
+  animeDirection: string;
 }

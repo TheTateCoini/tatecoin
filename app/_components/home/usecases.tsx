@@ -23,6 +23,7 @@ export default function Usecases() {
         </svg>
       ),
       label: "Decentralized finance",
+      animeDirection: "left",
       bgColor: "chartreuse",
       textColor: "#0e0e0e",
       description:
@@ -44,6 +45,7 @@ export default function Usecases() {
         </svg>
       ),
       label: "Gaming & NFTs",
+      animeDirection: "right",
       bgColor: "blueviolet",
       textColor: "#f5f5f5",
       description:
@@ -65,6 +67,7 @@ export default function Usecases() {
         </svg>
       ),
       label: "Token Launchpad",
+      animeDirection: "left",
       bgColor: "lightpink",
       textColor: "#0e0e0e",
       description:
@@ -86,6 +89,7 @@ export default function Usecases() {
         </svg>
       ),
       label: "Cross-Chain Interoperability",
+      animeDirection: "right",
       bgColor: "#efb909",
       textColor: "#f5f5f5",
       description:
@@ -107,6 +111,7 @@ export default function Usecases() {
         </svg>
       ),
       label: "Community Governance",
+      animeDirection: "left",
       bgColor: "skyblue",
       textColor: "#f5f5f5",
       description:
@@ -123,6 +128,7 @@ export default function Usecases() {
           key={u.label + i}
           bgColor={u.bgColor}
           textColor={u.textColor}
+          animeDirection={u.animeDirection}
         />
       ))}
     </div>

@@ -4,10 +4,10 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   const socials = [
-    "https://www.instagram.com/rift",
-    "https://www.twitter.com/rift",
-    "https://www.linkedin.com/in/rift",
-    "https://www.facebook.com/rift",
+    "https://www.instagram.com/tatecoin",
+    "https://www.twitter.com/tatecoin",
+    "https://www.linkedin.com/in/tatecoin",
+    "https://www.facebook.com/tatecoin",
   ];
   const menu = ["roadmap", "ICO", "presale"];
   const more = ["contact", "support"];
@@ -36,7 +36,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-          <div className="lg:w-[36%] flex items-start justify-between lg:mr-10 lg:mt-0 mt-8 text-lg">
+          <div className="lg:w-[36%] w-full flex items-start justify-between lg:mr-10 lg:my-0 my-8 text-lg">
             <div className="lg:w-1/2">
               {menu.map((m) => (
                 <Link key={m} href={`/${m}`}>
