@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "./button";
+import Button from "../basic/button";
 import { motion } from "framer-motion";
 
 export default function Subscribe() {
@@ -10,6 +10,7 @@ export default function Subscribe() {
     <motion.div
       initial={{ y: 200, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
       className="w-full rounded-[30px] lg:rounded-[40px] bg-lightgrey p-8 text-center lg:p-20 mt-32 flex flex-col items-center justify-between bg-gradient-to-r from-purple-600 via-purple-400 to-purple-300"
     >

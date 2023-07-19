@@ -22,3 +22,12 @@ export interface UsecaseProps {
   textColor: string;
   animeDirection: string;
 }
+
+export interface HeroTextProps {
+  title: string;
+  subtitle: string;
+}
+export interface QuestionProps {
+  question: string;
+  answer: string;
+}
