@@ -312,7 +312,7 @@ export const AppWrapper = ({ children }: { children: ReactNode }) => {
       setWeb3(_web3);
       console.log(_web3);
 
-      const _accounts = web3 ? await web3.eth.getAccounts() : [];
+      const _accounts = _web3 ? await _web3.eth.getAccounts() : [];
       setAccounts(_accounts);
       console.log(_accounts);
 
@@ -331,8 +331,6 @@ export const AppWrapper = ({ children }: { children: ReactNode }) => {
     accounts,
     contract,
   };
-
-  useEffect(() => {}, []);
 
   return (
     <AppContext.Provider value={sharedState}>{children}</AppContext.Provider>
