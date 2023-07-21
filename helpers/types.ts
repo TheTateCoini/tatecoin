@@ -31,3 +31,18 @@ export interface QuestionProps {
   question: string;
   answer: string;
 }
+export interface ApiResponse {
+  status: {
+    // Define status properties
+  };
+  data: {
+    BNB: {
+      quote: {
+        USD: {
+          price: number;
+          // Add other properties you may need from the quote
+        };
+      };
+    }[];
+  };
+}

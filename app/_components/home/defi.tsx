@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Defi() {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center" id="about">
       <motion.div
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

@@ -17,6 +17,7 @@ export default function Button({
       style={{
         backgroundColor: bg,
       }}
+      onClick={onPress}
     >
       {loading ? (
         <div className={`border-2 border-[white]`} />
