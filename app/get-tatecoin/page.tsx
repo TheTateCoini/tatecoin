@@ -109,7 +109,7 @@ export default function GetTatecoin() {
           labelColor="white"
         />
       </div>
-      <div className="flex flex-col justify-center lg:w-1/3 w-full lg:p-10 p-6 rounded-[40px] bg-gradient-to-r from-gray-600 to-gray-500 mt-8 lg:mt-16">
+      <div className="flex flex-col justify-center lg:w-1/3 w-full lg:p-10 p-6 rounded-[40px] bg-gradient-to-r from-gray-600 to-gray-500 mt-16">
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

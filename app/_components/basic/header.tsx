@@ -41,7 +41,7 @@ export default function Header() {
         </Link>
         {pathname === "/get-tatecoin" ? (
           <div
-            className="cursor-pointer rounded-lg lg:w-fit w-1/3 lg:p-4 p-2 bg-gradient-to-bl from-purple-600 via-purple-400 to-purple-300"
+            className="cursor-pointer flex items-center justify-center rounded-lg lg:w-fit w-1/3 lg:p-4 p-2 bg-gradient-to-bl from-purple-600 via-purple-400 to-purple-300"
             onClick={() => context?.connectWallet()}
           >
             <p className="font-semibold lg:tracking-wide lg:text-base text-xs overflow-clip">
