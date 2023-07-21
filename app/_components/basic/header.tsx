@@ -45,9 +45,7 @@ export default function Header() {
             onClick={() => context?.connectWallet()}
           >
             <p className="font-semibold lg:tracking-wide lg:text-base text-xs overflow-clip">
-              {context?.web3?.eth
-                ? context?.accounts[0]
-                : "Connect Your Wallet"}
+              {context?.web3?.eth ? context?.accounts[0] : "Connect Wallet"}
             </p>
           </div>
         ) : (

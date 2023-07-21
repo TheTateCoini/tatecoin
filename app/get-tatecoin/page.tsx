@@ -127,8 +127,8 @@ export default function GetTatecoin() {
           </svg>
           <p>
             You can also buy Tatecoin by sending BNB directly to this address:
-            {contractAddress}
           </p>
+          <p className="break-words">{contractAddress}</p>
         </span>
       </div>
     </div>
