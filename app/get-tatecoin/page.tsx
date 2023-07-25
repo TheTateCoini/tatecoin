@@ -9,7 +9,7 @@ export default function GetTatecoin() {
   const [bnb, setBnb] = useState(0);
   const context = useAppContext();
 
-  const bnbValue = 20000;
+  const bnbValue = 4000;
 
   const contractAddress = "0xf459A576FE105e3cB5Ea9A0CdA101a2632E70440";
 
@@ -61,7 +61,7 @@ export default function GetTatecoin() {
         *1 BNB = ${bnb?.toFixed(2)}
       </p>
       <p className="mt-2 tracking-wider text-purple-300">
-        *1 Tatecoin = 20,000 BNB
+        *1 Tatecoin (TCI) = 20,000 BNB
       </p>
       <div className="flex flex-col justify-center w-full lg:w-1/3 lg:p-10 p-6 rounded-[40px] bg-gradient-to-r from-purple-600 via-purple-400 to-purple-300 mt-8 lg:mt-16">
         <p className="text-lg font-medium tracking-wide mb-3">That means:</p>
@@ -98,7 +98,7 @@ export default function GetTatecoin() {
               }
             }}
           />
-          <p className="font-semibold tracking-wider">TateCoin</p>
+          <p className="font-semibold tracking-wider">TCI</p>
         </div>
         <Button
           bg="black"
