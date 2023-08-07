@@ -45,7 +45,10 @@ export default function GetTatecoin() {
           window.location.href = `https://bscscan.com/tx/${hash}`;
         }
       })
-      .on("error", console.error);
+      .on("error", (err) => {
+        console.log(err);
+        alert(err.message);
+      });
   };
 
   useEffect(() => {
@@ -71,11 +74,11 @@ export default function GetTatecoin() {
             type="number"
             value={amount.bnb}
             onChange={(e) => {
-              if (/^[0-9]*$/.test(e.target.value)) {
+              if (/^\d*\.?\d*$/.test(e.target.value)) {
                 let amount = e.target.value;
                 setAmount({
-                  bnb: parseInt(amount),
-                  tate: parseInt(amount) * bnbValue,
+                  bnb: parseFloat(amount),
+                  tate: parseFloat(amount) * bnbValue,
                 });
               }
             }}
@@ -89,11 +92,11 @@ export default function GetTatecoin() {
             type="number"
             value={amount.tate}
             onChange={(e) => {
-              if (/^[0-9]*$/.test(e.target.value)) {
+              if (/^\d*\.?\d*$/.test(e.target.value)) {
                 let amount = e.target.value;
                 setAmount({
-                  bnb: parseInt(amount) / bnbValue,
-                  tate: parseInt(amount),
+                  bnb: parseFloat(amount) / bnbValue,
+                  tate: parseFloat(amount),
                 });
               }
             }}
