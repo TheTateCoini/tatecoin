@@ -5,6 +5,7 @@ import Subscribe from "./_components/home/subscribe";
 import Usecases from "./_components/home/usecases";
 import Contact from "./_components/home/contact";
 import Support from "./_components/home/support";
+import Roadmap from "./_components/home/roadmap";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Defi />
       <Usecases />
+      <Roadmap />
       <Subscribe />
       <Contact />
       <Support />
