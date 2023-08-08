@@ -30,25 +30,49 @@ export default function GetTatecoin() {
 
   const buyToken = async () => {
     console.log(amount);
-    await context?.web3?.eth
-      .sendTransaction({
-        to: contractAddress,
-        from: context?.accounts[0],
-        value: context?.web3?.utils.toWei(amount.bnb.toString(), "ether"),
-      })
-      .on("transactionHash", function (hash: string) {
-        if (
-          window.confirm(
-            "Transaction successful. Click 'OK' to view on BscScan"
-          )
-        ) {
-          window.location.href = `https://bscscan.com/tx/${hash}`;
+
+    // Check if all necessary properties are available
+    if (context && context.web3 && context.accounts) {
+      const weiAmount = context.web3.utils.toWei(
+        amount.bnb.toString(),
+        "ether"
+      );
+
+      try {
+        await context.web3.eth
+          .sendTransaction({
+            to: contractAddress,
+            from: context.accounts[0],
+            value: weiAmount,
+          })
+          .on("transactionHash", function (hash: string) {
+            if (
+              window.confirm(
+                "Transaction successful. Click 'OK' to view on BscScan"
+              )
+            ) {
+              window.location.href = `https://bscscan.com/tx/${hash}`;
+            }
+          })
+          .on("receipt", function (receipt: any) {
+            // Handle receipt if needed
+          })
+          .on("error", function (error: Error) {
+            alert(error.message);
+          });
+      } catch (error) {
+        // Handle the error appropriately
+        if (typeof error === "string") {
+          alert(error);
+        } else if (error instanceof Error) {
+          alert(error.message);
+        } else {
+          console.error(error);
         }
-      })
-      .on("error", (err) => {
-        console.log(err);
-        alert(err.message);
-      });
+      }
+    } else {
+      console.log("Context or required properties are not available.");
+    }
   };
 
   useEffect(() => {
