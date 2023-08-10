@@ -9,7 +9,7 @@ export default function Footer() {
     "https://www.linkedin.com/in/tatecoin",
     "https://www.facebook.com/tatecoin",
   ];
-  const menu = ["roadmap", "ICO", "presale"];
+  const menu = ["roadmap"];
   const more = ["contact", "support"];
   return (
     <footer className="w-full bg-[#0e0e0e] text-white rounded-t-[60px] lg:px-16 px-8 lg:py-12 py-6 mt-28">
